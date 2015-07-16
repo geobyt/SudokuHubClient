@@ -8,13 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		5EFCD6551B519F99002F61E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD6541B519F99002F61E3 /* AppDelegate.swift */; };
-		5EFCD6571B519F99002F61E3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6561B519F99002F61E3 /* GameScene.sks */; };
 		5EFCD6591B519F99002F61E3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD6581B519F99002F61E3 /* GameScene.swift */; };
 		5EFCD65B1B519F99002F61E3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD65A1B519F99002F61E3 /* GameViewController.swift */; };
 		5EFCD65E1B519F99002F61E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD65C1B519F99002F61E3 /* Main.storyboard */; };
 		5EFCD6601B519F99002F61E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD65F1B519F99002F61E3 /* Images.xcassets */; };
 		5EFCD6631B519F99002F61E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6611B519F99002F61E3 /* LaunchScreen.xib */; };
 		5EFCD66F1B519F99002F61E3 /* SudokuHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD66E1B519F99002F61E3 /* SudokuHubTests.swift */; };
+		5EFCD6901B51A571002F61E3 /* NumberTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD68F1B51A571002F61E3 /* NumberTile.swift */; };
+		5EFCD69B1B51A5E8002F61E3 /* num0.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6911B51A5E8002F61E3 /* num0.png */; };
+		5EFCD69C1B51A5E8002F61E3 /* num1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6921B51A5E8002F61E3 /* num1.png */; };
+		5EFCD69D1B51A5E8002F61E3 /* num2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6931B51A5E8002F61E3 /* num2.png */; };
+		5EFCD69E1B51A5E8002F61E3 /* num3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6941B51A5E8002F61E3 /* num3.png */; };
+		5EFCD69F1B51A5E8002F61E3 /* num4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6951B51A5E8002F61E3 /* num4.png */; };
+		5EFCD6A01B51A5E8002F61E3 /* num5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6961B51A5E8002F61E3 /* num5.png */; };
+		5EFCD6A11B51A5E8002F61E3 /* num6.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6971B51A5E8002F61E3 /* num6.png */; };
+		5EFCD6A21B51A5E8002F61E3 /* num7.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6981B51A5E8002F61E3 /* num7.png */; };
+		5EFCD6A31B51A5E8002F61E3 /* num8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD6991B51A5E8002F61E3 /* num8.png */; };
+		5EFCD6A41B51A5E8002F61E3 /* num9.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCD69A1B51A5E8002F61E3 /* num9.png */; };
+		5EFCD6A61B51AA4E002F61E3 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD6A51B51AA4E002F61E3 /* Array2D.swift */; };
+		5EFCD6A81B51AAF1002F61E3 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD6A71B51AAF1002F61E3 /* Level.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +43,6 @@
 		5EFCD64F1B519F99002F61E3 /* SudokuHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFCD6531B519F99002F61E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EFCD6541B519F99002F61E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EFCD6561B519F99002F61E3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5EFCD6581B519F99002F61E3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		5EFCD65A1B519F99002F61E3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5EFCD65D1B519F99002F61E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +51,19 @@
 		5EFCD6681B519F99002F61E3 /* SudokuHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFCD66D1B519F99002F61E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EFCD66E1B519F99002F61E3 /* SudokuHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuHubTests.swift; sourceTree = "<group>"; };
+		5EFCD68F1B51A571002F61E3 /* NumberTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTile.swift; sourceTree = "<group>"; };
+		5EFCD6911B51A5E8002F61E3 /* num0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num0.png; sourceTree = "<group>"; };
+		5EFCD6921B51A5E8002F61E3 /* num1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num1.png; sourceTree = "<group>"; };
+		5EFCD6931B51A5E8002F61E3 /* num2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num2.png; sourceTree = "<group>"; };
+		5EFCD6941B51A5E8002F61E3 /* num3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num3.png; sourceTree = "<group>"; };
+		5EFCD6951B51A5E8002F61E3 /* num4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num4.png; sourceTree = "<group>"; };
+		5EFCD6961B51A5E8002F61E3 /* num5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num5.png; sourceTree = "<group>"; };
+		5EFCD6971B51A5E8002F61E3 /* num6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num6.png; sourceTree = "<group>"; };
+		5EFCD6981B51A5E8002F61E3 /* num7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num7.png; sourceTree = "<group>"; };
+		5EFCD6991B51A5E8002F61E3 /* num8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num8.png; sourceTree = "<group>"; };
+		5EFCD69A1B51A5E8002F61E3 /* num9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = num9.png; sourceTree = "<group>"; };
+		5EFCD6A51B51AA4E002F61E3 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		5EFCD6A71B51AAF1002F61E3 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +106,14 @@
 			isa = PBXGroup;
 			children = (
 				5EFCD6541B519F99002F61E3 /* AppDelegate.swift */,
-				5EFCD6561B519F99002F61E3 /* GameScene.sks */,
 				5EFCD6581B519F99002F61E3 /* GameScene.swift */,
 				5EFCD65A1B519F99002F61E3 /* GameViewController.swift */,
 				5EFCD65C1B519F99002F61E3 /* Main.storyboard */,
+				5EFCD68F1B51A571002F61E3 /* NumberTile.swift */,
+				5EFCD6A51B51AA4E002F61E3 /* Array2D.swift */,
+				5EFCD6A71B51AAF1002F61E3 /* Level.swift */,
 				5EFCD65F1B519F99002F61E3 /* Images.xcassets */,
+				5EFCD6781B51A023002F61E3 /* Sprites.atlas */,
 				5EFCD6611B519F99002F61E3 /* LaunchScreen.xib */,
 				5EFCD6521B519F99002F61E3 /* Supporting Files */,
 			);
@@ -116,6 +143,24 @@
 				5EFCD66D1B519F99002F61E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5EFCD6781B51A023002F61E3 /* Sprites.atlas */ = {
+			isa = PBXGroup;
+			children = (
+				5EFCD6911B51A5E8002F61E3 /* num0.png */,
+				5EFCD6921B51A5E8002F61E3 /* num1.png */,
+				5EFCD6931B51A5E8002F61E3 /* num2.png */,
+				5EFCD6941B51A5E8002F61E3 /* num3.png */,
+				5EFCD6951B51A5E8002F61E3 /* num4.png */,
+				5EFCD6961B51A5E8002F61E3 /* num5.png */,
+				5EFCD6971B51A5E8002F61E3 /* num6.png */,
+				5EFCD6981B51A5E8002F61E3 /* num7.png */,
+				5EFCD6991B51A5E8002F61E3 /* num8.png */,
+				5EFCD69A1B51A5E8002F61E3 /* num9.png */,
+			);
+			name = Sprites.atlas;
+			path = SudokuHubSprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +244,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EFCD6631B519F99002F61E3 /* LaunchScreen.xib in Resources */,
+				5EFCD6A11B51A5E8002F61E3 /* num6.png in Resources */,
+				5EFCD6A21B51A5E8002F61E3 /* num7.png in Resources */,
+				5EFCD69E1B51A5E8002F61E3 /* num3.png in Resources */,
+				5EFCD6A41B51A5E8002F61E3 /* num9.png in Resources */,
 				5EFCD6601B519F99002F61E3 /* Images.xcassets in Resources */,
-				5EFCD6571B519F99002F61E3 /* GameScene.sks in Resources */,
+				5EFCD6A31B51A5E8002F61E3 /* num8.png in Resources */,
+				5EFCD69B1B51A5E8002F61E3 /* num0.png in Resources */,
+				5EFCD69F1B51A5E8002F61E3 /* num4.png in Resources */,
+				5EFCD6A01B51A5E8002F61E3 /* num5.png in Resources */,
+				5EFCD69C1B51A5E8002F61E3 /* num1.png in Resources */,
 				5EFCD65E1B519F99002F61E3 /* Main.storyboard in Resources */,
+				5EFCD69D1B51A5E8002F61E3 /* num2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EFCD6A81B51AAF1002F61E3 /* Level.swift in Sources */,
 				5EFCD6591B519F99002F61E3 /* GameScene.swift in Sources */,
 				5EFCD65B1B519F99002F61E3 /* GameViewController.swift in Sources */,
+				5EFCD6901B51A571002F61E3 /* NumberTile.swift in Sources */,
 				5EFCD6551B519F99002F61E3 /* AppDelegate.swift in Sources */,
+				5EFCD6A61B51AA4E002F61E3 /* Array2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

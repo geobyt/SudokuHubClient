@@ -8,38 +8,63 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+class GameScene: SKScene
+{
+    var level: Level!
+    
+    let TileWidth: CGFloat = 32.0
+    let TileHeight: CGFloat = 36.0
+    
+    let gameLayer = SKNode()
+    let numberTilesLayer = SKNode()
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        fatalError("init(coder) is not used in this app")
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        /* Called when a touch begins */
+    override init(size: CGSize)
+    {
+        super.init(size: size)
         
-        for touch in (touches as! Set<UITouch>) {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+        anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        
+        let background = SKSpriteNode(imageNamed: "background")
+        background.size = self.frame.size
+        addChild(background)
+        
+        addChild(gameLayer)
+        
+        let layerPosition = CGPoint(
+            x: -TileWidth * CGFloat(NumColumns) / 2,
+            y: -TileHeight * CGFloat(NumRows) / 2)
+        
+        numberTilesLayer.position = layerPosition
+        gameLayer.addChild(numberTilesLayer)
+    }
+    
+    func addSpritesForNuberTiles(numberTiles: Set<NumberTile>)
+    {
+        for numberTile in numberTiles
+        {
+            let sprite = SKSpriteNode(imageNamed: numberTile.numberType.spriteName)
+            sprite.position = pointForColumn(numberTile.column, row:numberTile.row)
+            sprite.size = CGSize(width: TileWidth, height: TileHeight)
+            numberTilesLayer.addChild(sprite)
+            numberTile.sprite = sprite
         }
     }
-   
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+    
+    func pointForColumn(column: Int, row: Int) -> CGPoint
+    {
+        var xPos: CGFloat = CGFloat(column) * TileWidth + TileWidth / 2
+        xPos = xPos + CGFloat(column / 3) * 2
+        
+        var yPos: CGFloat = CGFloat(row) * TileHeight + TileHeight / 2
+        yPos = yPos + CGFloat(row / 3) * 2
+        
+        return CGPoint(
+            x: xPos,
+            y: yPos)
     }
 }
