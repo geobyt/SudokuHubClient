@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5C90971B6430810014AEBA /* sample_board.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E5C90961B6430810014AEBA /* sample_board.json */; };
+		5E5C90991B64310E0014AEBA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C90981B64310E0014AEBA /* Extensions.swift */; };
+		5E5C909B1B6438B20014AEBA /* Tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E5C909A1B6438B20014AEBA /* Tile.png */; };
+		5E5C909D1B643C880014AEBA /* NumberChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C909C1B643C880014AEBA /* NumberChooser.swift */; };
 		5EFCD6551B519F99002F61E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD6541B519F99002F61E3 /* AppDelegate.swift */; };
 		5EFCD6591B519F99002F61E3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD6581B519F99002F61E3 /* GameScene.swift */; };
 		5EFCD65B1B519F99002F61E3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCD65A1B519F99002F61E3 /* GameViewController.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E5C90961B6430810014AEBA /* sample_board.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_board.json; sourceTree = "<group>"; };
+		5E5C90981B64310E0014AEBA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5E5C909A1B6438B20014AEBA /* Tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tile.png; sourceTree = "<group>"; };
+		5E5C909C1B643C880014AEBA /* NumberChooser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberChooser.swift; sourceTree = "<group>"; };
 		5EFCD64F1B519F99002F61E3 /* SudokuHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFCD6531B519F99002F61E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EFCD6541B519F99002F61E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,12 +118,15 @@
 				5EFCD65A1B519F99002F61E3 /* GameViewController.swift */,
 				5EFCD65C1B519F99002F61E3 /* Main.storyboard */,
 				5EFCD68F1B51A571002F61E3 /* NumberTile.swift */,
+				5E5C909C1B643C880014AEBA /* NumberChooser.swift */,
 				5EFCD6A51B51AA4E002F61E3 /* Array2D.swift */,
 				5EFCD6A71B51AAF1002F61E3 /* Level.swift */,
+				5E5C90981B64310E0014AEBA /* Extensions.swift */,
 				5EFCD65F1B519F99002F61E3 /* Images.xcassets */,
 				5EFCD6781B51A023002F61E3 /* Sprites.atlas */,
 				5EFCD6611B519F99002F61E3 /* LaunchScreen.xib */,
 				5EFCD6521B519F99002F61E3 /* Supporting Files */,
+				5E5C90961B6430810014AEBA /* sample_board.json */,
 			);
 			path = SudokuHub;
 			sourceTree = "<group>";
@@ -148,6 +159,7 @@
 		5EFCD6781B51A023002F61E3 /* Sprites.atlas */ = {
 			isa = PBXGroup;
 			children = (
+				5E5C909A1B6438B20014AEBA /* Tile.png */,
 				5EFCD6911B51A5E8002F61E3 /* num0.png */,
 				5EFCD6921B51A5E8002F61E3 /* num1.png */,
 				5EFCD6931B51A5E8002F61E3 /* num2.png */,
@@ -243,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5C90971B6430810014AEBA /* sample_board.json in Resources */,
 				5EFCD6631B519F99002F61E3 /* LaunchScreen.xib in Resources */,
 				5EFCD6A11B51A5E8002F61E3 /* num6.png in Resources */,
 				5EFCD6A21B51A5E8002F61E3 /* num7.png in Resources */,
@@ -254,6 +267,7 @@
 				5EFCD69F1B51A5E8002F61E3 /* num4.png in Resources */,
 				5EFCD6A01B51A5E8002F61E3 /* num5.png in Resources */,
 				5EFCD69C1B51A5E8002F61E3 /* num1.png in Resources */,
+				5E5C909B1B6438B20014AEBA /* Tile.png in Resources */,
 				5EFCD65E1B519F99002F61E3 /* Main.storyboard in Resources */,
 				5EFCD69D1B51A5E8002F61E3 /* num2.png in Resources */,
 			);
@@ -275,10 +289,12 @@
 			files = (
 				5EFCD6A81B51AAF1002F61E3 /* Level.swift in Sources */,
 				5EFCD6591B519F99002F61E3 /* GameScene.swift in Sources */,
+				5E5C909D1B643C880014AEBA /* NumberChooser.swift in Sources */,
 				5EFCD65B1B519F99002F61E3 /* GameViewController.swift in Sources */,
 				5EFCD6901B51A571002F61E3 /* NumberTile.swift in Sources */,
 				5EFCD6551B519F99002F61E3 /* AppDelegate.swift in Sources */,
 				5EFCD6A61B51AA4E002F61E3 /* Array2D.swift in Sources */,
+				5E5C90991B64310E0014AEBA /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +490,7 @@
 				5EFCD6741B519F99002F61E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EFCD6751B519F99002F61E3 /* Build configuration list for PBXNativeTarget "SudokuHubTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +499,7 @@
 				5EFCD6771B519F99002F61E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

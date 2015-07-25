@@ -15,6 +15,7 @@ enum NumberType: Int, Printable
     var spriteName: String
     {
             let spriteNames = [
+                "num0",
                 "num1",
                 "num2",
                 "num3",
@@ -25,7 +26,7 @@ enum NumberType: Int, Printable
                 "num8",
                 "num9"]
             
-            return spriteNames[rawValue - 1]
+            return spriteNames[rawValue]
     }
     
     var description: String

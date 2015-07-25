@@ -42,7 +42,7 @@ class GameViewController: UIViewController
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
         
-        level = Level()
+        level = Level(filename: "sample_board")
         scene.level = level
         
         // Present the scene.
@@ -58,7 +58,7 @@ class GameViewController: UIViewController
     
     func createGameBoard() {
         let newNumberTiles = level.createBoard()
-        scene.addSpritesForNuberTiles(newNumberTiles)
+        scene.addSpritesForNumberTiles(newNumberTiles)
     }
     
 }

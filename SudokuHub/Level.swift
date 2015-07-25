@@ -15,6 +15,25 @@ class Level
 {
     private var numberTiles = Array2D<NumberTile>(columns: NumColumns, rows: NumRows)
     
+    init(filename: String)
+    {
+        if let dictionary = Dictionary<String, AnyObject>.loadJSONFromBundle(filename)
+        {
+            if let numbersArray: AnyObject = dictionary["board"]
+            {
+                for (row, rowArray) in enumerate(numbersArray as! [[Int]])
+                {
+                    let numberRow = NumRows - row - 1
+
+                    for (column, value) in enumerate(rowArray)
+                    {
+                        numberTiles[column, numberRow] = NumberTile(column: column, row: numberRow, numberType: NumberType(rawValue: value)!)
+                    }
+                }
+            }
+        }
+    }
+    
     func numberTileAtColumn(column: Int, row: Int) -> NumberTile?
     {
         assert(column >= 0 && column < NumColumns)
@@ -24,7 +43,18 @@ class Level
     
     func createBoard() -> Set<NumberTile>
     {
-        return createInitialBoard()
+        //return createInitialBoard()
+        var set = Set<NumberTile>()
+        
+        for row in 0...numberTiles.rows - 1
+        {
+            for column in 0...numberTiles.columns - 1
+            {
+                set.insert(numberTiles[row, column]!)
+            }
+        }
+        
+        return set
     }
     
     private func createInitialBoard() -> Set<NumberTile>

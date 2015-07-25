@@ -17,6 +17,10 @@ class GameScene: SKScene
     
     let gameLayer = SKNode()
     let numberTilesLayer = SKNode()
+    let numberChooserLayer = SKNode()
+    
+    var tileChooserShown: Bool = false
+    var numberChooser: NumberChooser = NumberChooser()
     
     required init?(coder aDecoder: NSCoder)
     {
@@ -41,17 +45,31 @@ class GameScene: SKScene
         
         numberTilesLayer.position = layerPosition
         gameLayer.addChild(numberTilesLayer)
+        
+        numberChooserLayer.position = layerPosition
+        gameLayer.addChild(numberChooserLayer)
     }
     
-    func addSpritesForNuberTiles(numberTiles: Set<NumberTile>)
+    func addSpritesForNumberTiles(numberTiles: Set<NumberTile>)
     {
         for numberTile in numberTiles
         {
-            let sprite = SKSpriteNode(imageNamed: numberTile.numberType.spriteName)
-            sprite.position = pointForColumn(numberTile.column, row:numberTile.row)
-            sprite.size = CGSize(width: TileWidth, height: TileHeight)
-            numberTilesLayer.addChild(sprite)
-            numberTile.sprite = sprite
+            if numberTile.numberType == NumberType.Unknown
+            {
+                let sprite = SKSpriteNode(imageNamed: "Tile")
+                sprite.position = pointForColumn(numberTile.column, row:numberTile.row)
+                sprite.size = CGSize(width: TileWidth, height: TileHeight)
+                numberTilesLayer.addChild(sprite)
+                numberTile.sprite = sprite
+            }
+            else
+            {
+                let sprite = SKSpriteNode(imageNamed: numberTile.numberType.spriteName)
+                sprite.position = pointForColumn(numberTile.column, row:numberTile.row)
+                sprite.size = CGSize(width: TileWidth, height: TileHeight)
+                numberTilesLayer.addChild(sprite)
+                numberTile.sprite = sprite
+            }
         }
     }
     
@@ -66,5 +84,48 @@ class GameScene: SKScene
         return CGPoint(
             x: xPos,
             y: yPos)
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
+    {
+        let touch = touches.first as! UITouch
+        let location = touch.locationInNode(numberTilesLayer)
+        
+        println("location of touch:(\(location.x), \(location.y))")
+        
+        if tileChooserShown
+        {
+            //detect if a touch is inside the chooser
+            if !numberChooser.isLocationInsideChooser(location)
+            {
+                tileChooserShown = false
+                var tilesToRemove = [numberChooser.backgroundSprite!]
+                
+                for tile in numberChooser.numberTiles
+                {
+                    tilesToRemove.append(tile.sprite!)
+                }
+                
+                numberChooserLayer.removeChildrenInArray(tilesToRemove)
+            }
+        }
+        else
+        {
+            addChooserSprite(location)
+        }
+    }
+    
+    func addChooserSprite(location: CGPoint)
+    {
+        tileChooserShown = true
+        
+        numberChooser = NumberChooser(location: location, size: CGSize(width: TileWidth * 3, height: TileHeight * 3))
+        
+        numberChooserLayer.addChild(numberChooser.backgroundSprite!)
+        
+        for i in 0...numberChooser.numberTiles.count - 1
+        {
+            numberChooserLayer.addChild(numberChooser.numberTiles[i].sprite!)
+        }
     }
 }
